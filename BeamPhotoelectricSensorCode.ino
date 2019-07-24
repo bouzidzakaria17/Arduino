@@ -1,8 +1,6 @@
-int analogInPin = A5;  
-int ledPin =13;
-int sensorValue = 0;   
-
-
+int analogInPin = A5;  // Analog Pin that read the values from the sensor
+int ledPin =13; // Pin that control the led to turn on and off.
+int sensorValue = 0;   //Initial value for the sensor value
 
 void setup() {
   // initialize serial communications at 9600 bps:
@@ -19,10 +17,12 @@ void loop() {
   
   if(sensorValue>600)
   {
+    //turn on the Led
     digitalWrite(ledPin,1);
   }
   else
   {
+    //turn off the Led
     digitalWrite(ledPin,0);
   }  
 }
